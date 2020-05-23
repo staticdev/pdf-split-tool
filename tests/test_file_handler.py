@@ -1,5 +1,4 @@
 """Test cases for the file_handler module."""
-import os
 from unittest.mock import Mock
 
 import pytest
@@ -24,6 +23,4 @@ def test_get_filename_not_found(fs: MockFixture, cwd: Mock) -> None:
 def test_get_filename_current_folder(fs: MockFixture, cwd: Mock) -> None:
     """It returns filename found in current folder."""
     fs.create_file("/path/report.pdf")
-    assert (
-        file_handler.get_filenames("*.pdf") == ["report.pdf"]
-    )
+    assert file_handler.get_filenames("*.pdf") == ["report.pdf"]
