@@ -1,0 +1,10 @@
+{
+  "_template": "cookiecutter-hypermodern-python/",
+  "author": "Claudio Jolowicz",
+  "email": "thiagocavila@gmail.com",
+  "friendly_name": "Pdf Split Tool",
+  "github_user": "staticdev",
+  "package_name": "pdf_split_tool",
+  "project_name": "pdf-split-tool",
+  "version": "0.1.0"
+}
