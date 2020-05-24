@@ -392,6 +392,14 @@ python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
 version = "2.4.7"
 
 [[package]]
+category = "main"
+description = "PDF toolkit"
+name = "pypdf4"
+optional = false
+python-versions = "*"
+version = "1.27.0"
+
+[[package]]
 category = "dev"
 description = "pytest: simple powerful testing with Python"
 name = "pytest"
@@ -751,7 +759,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["jaraco.itertools", "func-timeout"]
 
 [metadata]
-content-hash = "d49f613734018ea79c9be2404f6a65ea0fb2f773b16fbbeffcf51f07a6fd79b7"
+content-hash = "7574b689ae34df136485f54fa034d0ecdf1d7c345e7ae5f748b80f2b6621687e"
 python-versions = "^3.6.1"
 
 [metadata.files]
@@ -970,6 +978,9 @@ pygments = [
 pyparsing = [
     {file = "pyparsing-2.4.7-py2.py3-none-any.whl", hash = "sha256:ef9d7589ef3c200abe66653d3f1ab1033c3c419ae9b9bdb1240a85b024efc88b"},
     {file = "pyparsing-2.4.7.tar.gz", hash = "sha256:c203ec8783bf771a155b207279b9bccb8dea02d8f0c9e5f8ead507bc3246ecc1"},
+]
+pypdf4 = [
+    {file = "PyPDF4-1.27.0.tar.gz", hash = "sha256:7c932441146d205572f96254d53c79ea2c30c9e11df55a5cf87e056c7b3d7f89"},
 ]
 pytest = [
     {file = "pytest-5.4.2-py3-none-any.whl", hash = "sha256:95c710d0a72d91c13fae35dce195633c929c3792f54125919847fdcdf7caa0d3"},
