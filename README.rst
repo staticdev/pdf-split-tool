@@ -36,13 +36,18 @@ Pdf Split Tool
 Features
 --------
 
-* TODO
+Split documents by size (20mb) (this is an experimental versio, soon there will be an option to choose the max size).
 
 
 Requirements
 ------------
 
-* TODO
+You need Python 3.8 or above installed on your machine.
+
+Windows users should download `Windows x86-64 executable installer` and in the installer screen be ensure the option `Add Python 3.8 to PATH` is checked:
+
+.. image:: docs/_images/winpath.png
+   :alt: Windows Installation PATH checkbox
 
 
 Installation
@@ -52,13 +57,20 @@ You can install *Pdf Split Tool* via pip_ from PyPI_:
 
 .. code:: console
 
-   $ pip install pdf-split-tool
+   pip install pdf-split-tool
+
+Note: on Windows you can copy the above command in the `cmd` program.
 
 
 Usage
 -----
 
-* TODO
+1) Go to the directory with PDFs.
+2) Execute the program with the command:
+
+.. code:: console
+
+   pdf-split-tool
 
 
 Contributing
