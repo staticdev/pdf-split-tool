@@ -14,10 +14,51 @@ def runner() -> click.testing.CliRunner:
     return click.testing.CliRunner()
 
 
-@patch("pdf_split_tool.file_handler.get_filenames")
-def test_main_succeeds(
-    mock_file_handler_get_filenames: Mock, runner: click.testing.CliRunner
+@patch("pdf_split_tool.file_handler.get_filenames", return_value=["filename"])
+@patch("pdf_split_tool.pdf_splitter.PdfSplitter", autospec=True)
+def test_main_valid_resolution(
+    mock_pdf_splitter_pdfsplitter: Mock,
+    mock_file_handler_get_filenames: Mock,
+    runner: click.testing.CliRunner,
 ) -> None:
     """It exits with a status code of zero."""
     result = runner.invoke(__main__.main)
+    assert result.exit_code == 0
+
+
+@patch("pdf_split_tool.file_handler.get_filenames", return_value=["filename"])
+@patch("pdf_split_tool.pdf_splitter.PdfSplitter", autospec=True)
+def test_main_invalid_resolution_skipped(
+    mock_pdf_splitter_pdfsplitter: Mock,
+    mock_file_handler_get_filenames: Mock,
+    runner: click.testing.CliRunner,
+) -> None:
+    """It exits with a status code of zero."""
+    mock_pdf_splitter_pdfsplitter.return_value.validate_resolution.return_value = False
+    result = runner.invoke(__main__.main)
+    assert result.output == (
+        "Warning: filename has more than 200kb per page. "
+        "Consider reducing resolution before splitting.\n"
+        "Do you want to continue? [y/N]: \n"
+        "filename skipped.\n"
+    )
+    assert result.exit_code == 0
+
+
+@patch("pdf_split_tool.file_handler.get_filenames", return_value=["filename"])
+@patch("pdf_split_tool.pdf_splitter.PdfSplitter", autospec=True)
+@patch("click.confirm", return_value=True)
+def test_main_invalid_resolution_confirm(
+    mock_click_confirm: Mock,
+    mock_pdf_splitter_pdfsplitter: Mock,
+    mock_file_handler_get_filenames: Mock,
+    runner: click.testing.CliRunner,
+) -> None:
+    """It exits with a status code of zero."""
+    mock_pdf_splitter_pdfsplitter.return_value.validate_resolution.return_value = False
+    result = runner.invoke(__main__.main)
+    assert result.output == (
+        "Warning: filename has more than 200kb per page. "
+        "Consider reducing resolution before splitting.\n"
+    )
     assert result.exit_code == 0

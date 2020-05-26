@@ -36,13 +36,16 @@ Pdf Split Tool
 Features
 --------
 
-Split documents by size (20mb) (this is an experimental versio, soon there will be an option to choose the max size).
+* Cross-platform: Windows, Mac, and Linux are officially supported.
+* Works with Python 3.6, 3.7 and 3.8.
+* Splits documents by max size.
+* Checks for high-resolution PDFs before splitting.
 
 
 Requirements
 ------------
 
-You need Python 3.8 or above installed on your machine.
+You need Python 3.6.1 or above (3.8 recommended) installed on your machine.
 
 Windows users should download `Windows x86-64 executable installer` and in the installer screen be ensure the option `Add Python 3.8 to PATH` is checked:
 
@@ -71,6 +74,12 @@ Usage
 .. code:: console
 
    pdf-split-tool
+
+You can choose the max size in megabytes with the option `-m` or `--max-size`:
+
+.. code:: console
+
+   pdf-split-tool --max-size 50 # for 50 megabytes
 
 
 Contributing
