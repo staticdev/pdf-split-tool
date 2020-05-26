@@ -69,7 +69,7 @@ Usage
 -----
 
 1) Go to the directory with PDFs.
-2) Execute the program with the command:
+2) For splits with the default value (20mb), execute the program with the command:
 
 .. code:: console
 
