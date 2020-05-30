@@ -62,3 +62,12 @@ def test_main_invalid_resolution_confirm(
         "Consider reducing resolution before splitting.\n"
     )
     assert result.exit_code == 0
+
+
+# @patch("pdf_split_tool.pdf_splitter.PdfSplitter", autospec=True)
+# def test_main_uses_specified_filepath(
+#     mock_pdf_splitter_pdfsplitter: Mock, runner: click.testing.CliRunner,
+# ) -> None:
+#     """It uses the specified filepath."""
+#     result = runner.invoke(__main__.main, ["test.pdf"])
+#     assert result.exit_code == 0
