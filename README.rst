@@ -36,7 +36,7 @@ Features
 --------
 
 * Cross-platform: Windows, Mac, and Linux are officially supported.
-* Works with Python 3.6, 3.7 and 3.8.
+* Works with Python 3.6.1+, 3.7 and 3.8.
 * Splits documents by max size.
 * Checks for high-resolution PDFs before splitting.
 
