@@ -4,6 +4,7 @@ from unittest.mock import patch
 
 import click.testing
 import pytest
+from pytest_mock import MockFixture
 
 from pdf_split_tool import __main__
 
@@ -14,24 +15,34 @@ def runner() -> click.testing.CliRunner:
     return click.testing.CliRunner()
 
 
-@patch("pdf_split_tool.file_handler.get_filenames", return_value=["filename"])
-@patch("pdf_split_tool.pdf_splitter.PdfSplitter", autospec=True)
+@pytest.fixture
+def mock_file_handler_get_filenames(mocker: MockFixture) -> Mock:
+    """Fixture for mocking pdf_split_tool.file_handler.get_filenames."""
+    return mocker.patch(
+        "pdf_split_tool.file_handler.get_filenames", return_value=["filename"]
+    )
+
+
+@pytest.fixture
+def mock_pdf_splitter_pdfsplitter(mocker: MockFixture) -> Mock:
+    """Fixture for mocking pdf_splitter.PdfSplitter."""
+    return mocker.patch("pdf_split_tool.pdf_splitter.PdfSplitter", autospec=True)
+
+
 def test_main_valid_resolution(
-    mock_pdf_splitter_pdfsplitter: Mock,
-    mock_file_handler_get_filenames: Mock,
     runner: click.testing.CliRunner,
+    mock_file_handler_get_filenames: Mock,
+    mock_pdf_splitter_pdfsplitter: Mock,
 ) -> None:
     """It exits with a status code of zero."""
     result = runner.invoke(__main__.main)
     assert result.exit_code == 0
 
 
-@patch("pdf_split_tool.file_handler.get_filenames", return_value=["filename"])
-@patch("pdf_split_tool.pdf_splitter.PdfSplitter", autospec=True)
 def test_main_invalid_resolution_skipped(
-    mock_pdf_splitter_pdfsplitter: Mock,
-    mock_file_handler_get_filenames: Mock,
     runner: click.testing.CliRunner,
+    mock_file_handler_get_filenames: Mock,
+    mock_pdf_splitter_pdfsplitter: Mock,
 ) -> None:
     """It exits with a status code of zero."""
     mock_pdf_splitter_pdfsplitter.return_value.validate_resolution.return_value = False
@@ -45,14 +56,12 @@ def test_main_invalid_resolution_skipped(
     assert result.exit_code == 0
 
 
-@patch("pdf_split_tool.file_handler.get_filenames", return_value=["filename"])
-@patch("pdf_split_tool.pdf_splitter.PdfSplitter", autospec=True)
 @patch("click.confirm", return_value=True)
 def test_main_invalid_resolution_confirm(
     mock_click_confirm: Mock,
-    mock_pdf_splitter_pdfsplitter: Mock,
-    mock_file_handler_get_filenames: Mock,
     runner: click.testing.CliRunner,
+    mock_file_handler_get_filenames: Mock,
+    mock_pdf_splitter_pdfsplitter: Mock,
 ) -> None:
     """It exits with a status code of zero."""
     mock_pdf_splitter_pdfsplitter.return_value.validate_resolution.return_value = False
@@ -64,10 +73,11 @@ def test_main_invalid_resolution_confirm(
     assert result.exit_code == 0
 
 
-# @patch("pdf_split_tool.pdf_splitter.PdfSplitter", autospec=True)
-# def test_main_uses_specified_filepath(
-#     mock_pdf_splitter_pdfsplitter: Mock, runner: click.testing.CliRunner,
-# ) -> None:
-#     """It uses the specified filepath."""
-#     result = runner.invoke(__main__.main, ["test.pdf"])
-#     assert result.exit_code == 0
+def test_main_uses_specified_filepath(
+    runner: click.testing.CliRunner, mock_pdf_splitter_pdfsplitter: Mock,
+) -> None:
+    """It uses the specified filepath."""
+    with runner.isolated_filesystem():
+        with open("test.pdf", "w"):
+            result = runner.invoke(__main__.main, ["test.pdf"])
+    assert result.exit_code == 0
