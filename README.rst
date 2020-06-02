@@ -75,7 +75,7 @@ Usage
 
 .. code:: console
 
-   pdf-split-tool C:/folder/myfile.pdf
+   pdf-split-tool C:\Users\John\myfile.pdf
 
 * For splits with the default value (20mb) of all PDFs in a folder
 
