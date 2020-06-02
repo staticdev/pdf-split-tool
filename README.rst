@@ -1,4 +1,3 @@
-
 Pdf Split Tool
 ==============
 
@@ -68,18 +67,29 @@ Note: on Windows you can copy the above command in the `cmd` program.
 Usage
 -----
 
-1) Go to the directory with PDFs.
-2) For splits with the default value (20mb), execute the program with the command:
+1) Enter the terminal of your operating system eg. `cmd` program on Windows or shell on Linux and MacOS.
+
+2) Choose the one option and execute the command on the terminal:
+
+* For splits with the default value (20mb) of a specific PDF
+
+.. code:: console
+
+   pdf-split-tool C:/folder/myfile.pdf
+
+* For splits with the default value (20mb) of all PDFs in a folder
 
 .. code:: console
 
    pdf-split-tool
 
-You can choose the max size in megabytes with the option `-m` or `--max-size`:
+* You can choose the max size in megabytes with the option `-m` or `--max-size`
 
 .. code:: console
 
    pdf-split-tool --max-size 50 # for 50 megabytes
+
+Note: you can also use --max-size after the path of a specific PDF.
 
 
 Contributing
