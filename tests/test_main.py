@@ -1,4 +1,5 @@
 """Test cases for the __main__ module."""
+from typing import Any
 from unittest.mock import Mock
 from unittest.mock import patch
 
@@ -16,7 +17,7 @@ def runner() -> click.testing.CliRunner:
 
 
 @pytest.fixture
-def mock_file_handler_get_filenames(mocker: MockFixture) -> Mock:
+def mock_file_handler_get_filenames(mocker: MockFixture) -> Any:
     """Fixture for mocking pdf_split_tool.file_handler.get_filenames."""
     return mocker.patch(
         "pdf_split_tool.file_handler.get_filenames", return_value=["filename"]
@@ -24,15 +25,15 @@ def mock_file_handler_get_filenames(mocker: MockFixture) -> Mock:
 
 
 @pytest.fixture
-def mock_pdf_splitter_pdfsplitter(mocker: MockFixture) -> Mock:
+def mock_pdf_splitter_pdfsplitter(mocker: MockFixture) -> Any:
     """Fixture for mocking pdf_splitter.PdfSplitter."""
     return mocker.patch("pdf_split_tool.pdf_splitter.PdfSplitter", autospec=True)
 
 
 def test_main_valid_resolution(
     runner: click.testing.CliRunner,
-    mock_file_handler_get_filenames: Mock,
-    mock_pdf_splitter_pdfsplitter: Mock,
+    mock_file_handler_get_filenames: Any,
+    mock_pdf_splitter_pdfsplitter: Any,
 ) -> None:
     """It exits with a status code of zero."""
     result = runner.invoke(__main__.main)
@@ -41,8 +42,8 @@ def test_main_valid_resolution(
 
 def test_main_invalid_resolution_skipped(
     runner: click.testing.CliRunner,
-    mock_file_handler_get_filenames: Mock,
-    mock_pdf_splitter_pdfsplitter: Mock,
+    mock_file_handler_get_filenames: Any,
+    mock_pdf_splitter_pdfsplitter: Any,
 ) -> None:
     """It exits with a status code of zero."""
     mock_pdf_splitter_pdfsplitter.return_value.validate_resolution.return_value = False
@@ -60,8 +61,8 @@ def test_main_invalid_resolution_skipped(
 def test_main_invalid_resolution_confirm(
     mock_click_confirm: Mock,
     runner: click.testing.CliRunner,
-    mock_file_handler_get_filenames: Mock,
-    mock_pdf_splitter_pdfsplitter: Mock,
+    mock_file_handler_get_filenames: Any,
+    mock_pdf_splitter_pdfsplitter: Any,
 ) -> None:
     """It exits with a status code of zero."""
     mock_pdf_splitter_pdfsplitter.return_value.validate_resolution.return_value = False
@@ -74,7 +75,7 @@ def test_main_invalid_resolution_confirm(
 
 
 def test_main_uses_specified_filepath(
-    runner: click.testing.CliRunner, mock_pdf_splitter_pdfsplitter: Mock,
+    runner: click.testing.CliRunner, mock_pdf_splitter_pdfsplitter: Any,
 ) -> None:
     """It uses the specified filepath."""
     with runner.isolated_filesystem():

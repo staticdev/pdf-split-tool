@@ -8,6 +8,13 @@ readme = "README.rst"
 homepage = "https://github.com/staticdev/pdf-split-tool"
 repository = "https://github.com/staticdev/pdf-split-tool"
 documentation = "https://pdf-split-tool.readthedocs.io"
+classifiers = [
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "License :: OSI Approved :: MIT License",
+]
 
 [tool.poetry.urls]
 Changelog = "https://github.com/staticdev/pdf-split-tool/releases"
