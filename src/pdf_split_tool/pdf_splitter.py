@@ -28,7 +28,7 @@ class PdfSplitter:
             return False
         return True
 
-    def get_pdf_size(self, pdf_writer: PyPDF4.PdfFileWriter) -> int:
+    def _get_pdf_size(self, pdf_writer: PyPDF4.PdfFileWriter) -> int:
         """Generates temporary PDF.
 
         Args:
@@ -62,7 +62,7 @@ class PdfSplitter:
                     pdf_writer = PyPDF4.PdfFileWriter()
                     for page in range(current_page, end_page):
                         pdf_writer.addPage(self.input_pdf.getPage(page))
-                    current_size = self.get_pdf_size(pdf_writer)
+                    current_size = self._get_pdf_size(pdf_writer)
                     self.input_pdf = PyPDF4.PdfFileReader(self.filepath, "rb")
                     end_page -= 1
 
