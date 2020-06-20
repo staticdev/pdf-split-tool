@@ -452,7 +452,7 @@ category = "dev"
 description = "YAML parser and emitter for Python"
 name = "pyyaml"
 optional = false
-python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
+python-versions = "*"
 version = "5.3.1"
 
 [[package]]
@@ -759,7 +759,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["jaraco.itertools", "func-timeout"]
 
 [metadata]
-content-hash = "c8346c37c3e59fce240bc6c801e6d52195207632e57e4cee91757131b0086282"
+content-hash = "892a51706af0e525b8a98d61b3244ff0ad1ee1e0a925f726977123f1d4ca4f90"
 python-versions = "^3.6.1"
 
 [metadata.files]
