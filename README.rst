@@ -1,35 +1,39 @@
 Pdf Split Tool
 ==============
 
-|Tests| |Codecov| |PyPI| |Python Version| |Read the Docs| |License| |Black| |pre-commit| |Dependabot|
+|PyPI| |Python Version| |License|
 
-.. |Tests| image:: https://github.com/staticdev/pdf-split-tool/workflows/Tests/badge.svg
-   :target: https://github.com/staticdev/pdf-split-tool/actions?workflow=Tests
-   :alt: Tests
-.. |Codecov| image:: https://codecov.io/gh/staticdev/pdf-split-tool/branch/master/graph/badge.svg
-   :target: https://codecov.io/gh/staticdev/pdf-split-tool
-   :alt: Codecov
+|Read the Docs| |Tests| |Codecov|
+
+|pre-commit| |Dependabot| |Black|
+
 .. |PyPI| image:: https://img.shields.io/pypi/v/pdf-split-tool.svg
    :target: https://pypi.org/project/pdf-split-tool/
    :alt: PyPI
 .. |Python Version| image:: https://img.shields.io/pypi/pyversions/pdf-split-tool
    :target: https://pypi.org/project/pdf-split-tool
    :alt: Python Version
-.. |Read the Docs| image:: https://readthedocs.org/projects/pdf-split-tool/badge/
-   :target: https://pdf-split-tool.readthedocs.io/
-   :alt: Read the Docs
 .. |License| image:: https://img.shields.io/pypi/l/pdf-split-tool
    :target: https://opensource.org/licenses/MIT
    :alt: License
-.. |Black| image:: https://img.shields.io/badge/code%20style-black-000000.svg
-   :target: https://github.com/psf/black
-   :alt: Black
+.. |Read the Docs| image:: https://img.shields.io/readthedocs/pdf-split-tool/latest.svg?label=Read%20the%20Docs
+   :target: https://pdf-split-tool.readthedocs.io/
+   :alt: Read the documentation at https://pdf-split-tool.readthedocs.io/
+.. |Tests| image:: https://github.com/staticdev/pdf-split-tool/workflows/Tests/badge.svg
+   :target: https://github.com/staticdev/pdf-split-tool/actions?workflow=Tests
+   :alt: Tests
+.. |Codecov| image:: https://codecov.io/gh/staticdev/pdf-split-tool/branch/master/graph/badge.svg
+   :target: https://codecov.io/gh/staticdev/pdf-split-tool
+   :alt: Codecov
 .. |pre-commit| image:: https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white
    :target: https://github.com/pre-commit/pre-commit
    :alt: pre-commit
 .. |Dependabot| image:: https://api.dependabot.com/badges/status?host=github&repo=staticdev/pdf-split-tool
    :target: https://dependabot.com
    :alt: Dependabot
+.. |Black| image:: https://img.shields.io/badge/code%20style-black-000000.svg
+   :target: https://github.com/psf/black
+   :alt: Black
 
 
 Features
