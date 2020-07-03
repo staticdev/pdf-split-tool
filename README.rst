@@ -93,7 +93,7 @@ Usage
 
    pdf-split-tool --max-size 50 # for 50 megabytes
 
-Note: you can also use --max-size after the path of a specific PDF.
+Note: you can also use --max-size after the path of a specific PDF and fractional numbers such as "50.5".
 
 
 Contributing

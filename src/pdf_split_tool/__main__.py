@@ -1,4 +1,6 @@
 """Command-line interface."""
+import math
+
 import click
 
 import pdf_split_tool.file_handler
@@ -34,14 +36,14 @@ def _confirm_split_file(filepath: str, max_size_bytes: int) -> None:
 @click.option(
     "-m",
     "--max-size",
-    type=int,
+    type=float,
     help="Max size in megabytes.",
     default=20,
     show_default=True,
 )
-def main(filepath: str, max_size: int) -> None:
+def main(filepath: str, max_size: float) -> None:
     """Pdf Split Tool."""
-    max_size_bytes = max_size * 1024 * 1024  # convert to MB
+    max_size_bytes = math.floor(max_size * 1024 * 1024)  # convert to bytes
     if filepath.endswith(".pdf"):
         _confirm_split_file(filepath, max_size_bytes)
     else:

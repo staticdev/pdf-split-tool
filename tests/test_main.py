@@ -81,3 +81,13 @@ def test_main_uses_specified_filepath(
         with open("test.pdf", "w"):
             result = runner.invoke(__main__.main, ["test.pdf"])
     assert result.exit_code == 0
+
+
+def test_main_uses_float_max_size(
+    runner: click.testing.CliRunner, mock_pdf_splitter_pdfsplitter: Mock,
+) -> None:
+    """It uses the specified filepath."""
+    with runner.isolated_filesystem():
+        with open("test.pdf", "w"):
+            result = runner.invoke(__main__.main, ["-m", "0.5"])
+    assert result.exit_code == 0
