@@ -1,4 +1,5 @@
 """Test cases for the file handler module."""
+import os
 from unittest.mock import Mock
 
 import pytest
@@ -22,4 +23,5 @@ def test_get_filename_not_found(fs: Mock, cwd: Mock) -> None:
 def test_get_filename_current_folder(fs: Mock, cwd: Mock) -> None:
     """It returns filename found in current folder."""
     fs.create_file("/path/report.pdf")
-    assert file_handler.get_filenames(".", "*.pdf") == ["./report.pdf"]
+    expected_path = os.path.join(".", "report.pdf")
+    assert file_handler.get_filenames(".", "*.pdf") == [expected_path]
