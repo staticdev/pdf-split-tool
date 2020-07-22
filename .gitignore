@@ -8,3 +8,9 @@
 /src/*.egg-info/
 __pycache__/
 *.pdf
+
+# Pycharm
+.idea/
+
+# Visual Studio Code
+.vscode/
