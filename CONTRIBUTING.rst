@@ -2,7 +2,9 @@ Contributor Guide
 =================
 
 Thank you for your interest in improving this project.
-This project is open-source welcomes contributions in the form of bug reports, feature requests, and pull requests.
+Thank you for your interest in improving this project.
+This project is open-source under the `MIT license`_ and
+welcomes contributions in the form of bug reports, feature requests, and pull requests.
 
 Here is a list of important resources for contributors:
 
@@ -11,6 +13,7 @@ Here is a list of important resources for contributors:
 - `Issue Tracker`_
 - `Code of Conduct`_
 
+.. _MIT license: https://opensource.org/licenses/MIT
 .. _Source Code: https://github.com/staticdev/pdf-split-tool
 .. _Documentation: https://pdf-split-tool.readthedocs.io/
 .. _Issue Tracker: https://github.com/staticdev/pdf-split-tool/issues
