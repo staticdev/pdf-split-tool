@@ -2,7 +2,6 @@ Contributor Guide
 =================
 
 Thank you for your interest in improving this project.
-Thank you for your interest in improving this project.
 This project is open-source under the `MIT license`_ and
 welcomes contributions in the form of bug reports, feature requests, and pull requests.
 
