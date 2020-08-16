@@ -2,8 +2,7 @@ Contributor Guide
 =================
 
 Thank you for your interest in improving this project.
-This project is open-source under the `MIT license`_ and
-welcomes contributions in the form of bug reports, feature requests, and pull requests.
+This project is open-source welcomes contributions in the form of bug reports, feature requests, and pull requests.
 
 Here is a list of important resources for contributors:
 
@@ -12,7 +11,6 @@ Here is a list of important resources for contributors:
 - `Issue Tracker`_
 - `Code of Conduct`_
 
-.. _MIT license: https://opensource.org/licenses/MIT
 .. _Source Code: https://github.com/staticdev/pdf-split-tool
 .. _Documentation: https://pdf-split-tool.readthedocs.io/
 .. _Issue Tracker: https://github.com/staticdev/pdf-split-tool/issues
@@ -107,16 +105,15 @@ Your pull request needs to meet the following guidelines for acceptance:
 
 Feel free to submit early, though—we can always iterate on this.
 
-You can ensure that your changes adhere to the code style by reformatting with Black_:
+To run linting and code formatting checks before commiting your change, you can install pre-commit as a Git hook by running the following command:
 
 .. code:: console
 
-   $ nox --session=black
+   $ nox --session=pre-commit -- install
 
 It is recommended to open an issue before starting work on anything.
 This will allow a chance to talk it over with the owners and validate your approach.
 
 .. _pull request: https://github.com/staticdev/pdf-split-tool/pulls
-.. _Black: https://black.readthedocs.io/
 .. github-only
 .. _Code of Conduct: CODE_OF_CONDUCT.rst
