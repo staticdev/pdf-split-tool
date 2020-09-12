@@ -74,7 +74,8 @@ def test_main_invalid_resolution_confirm(
 
 
 def test_main_uses_specified_filepath(
-    runner: click.testing.CliRunner, mock_pdf_splitter_pdfsplitter: Mock,
+    runner: click.testing.CliRunner,
+    mock_pdf_splitter_pdfsplitter: Mock,
 ) -> None:
     """It uses the specified filepath."""
     with runner.isolated_filesystem():
@@ -84,7 +85,8 @@ def test_main_uses_specified_filepath(
 
 
 def test_main_uses_float_max_size(
-    runner: click.testing.CliRunner, mock_pdf_splitter_pdfsplitter: Mock,
+    runner: click.testing.CliRunner,
+    mock_pdf_splitter_pdfsplitter: Mock,
 ) -> None:
     """It uses the specified filepath."""
     with runner.isolated_filesystem():
