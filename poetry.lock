@@ -526,7 +526,7 @@ virtualenv = ">=20.0.8"
 
 [[package]]
 name = "pre-commit-hooks"
-version = "3.3.0"
+version = "3.4.0"
 description = "Some out-of-the-box hooks for pre-commit."
 category = "dev"
 optional = false
@@ -1002,7 +1002,7 @@ testing = ["jaraco.itertools", "func-timeout"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.6.1"
-content-hash = "858728bcc198f1a54166519abab40c28083da18aee87e76ed7cd6c942abd0cf6"
+content-hash = "aee0ffadfd2e51e5ebac72c25bb0a9916582fd497dca0ce1f0d45e9566b8bb55"
 
 [metadata.files]
 alabaster = [
@@ -1268,8 +1268,8 @@ pre-commit = [
     {file = "pre_commit-2.9.3.tar.gz", hash = "sha256:ee784c11953e6d8badb97d19bc46b997a3a9eded849881ec587accd8608d74a4"},
 ]
 pre-commit-hooks = [
-    {file = "pre_commit_hooks-3.3.0-py2.py3-none-any.whl", hash = "sha256:2190d72ac867bd9b8880de32d9304ec54182c89720cce56f22742890ed8ba90f"},
-    {file = "pre_commit_hooks-3.3.0.tar.gz", hash = "sha256:1e18c0451279fb88653c7b9f8fd73ccc35925e95b636c5b64095538f68a23b06"},
+    {file = "pre_commit_hooks-3.4.0-py2.py3-none-any.whl", hash = "sha256:b1d329fc712f53f56af7c4a0ac08c414a7fcfd634dbd829c3a03f39cfb9c3574"},
+    {file = "pre_commit_hooks-3.4.0.tar.gz", hash = "sha256:57e377b931aceead550e4a7bdbe8065e79e371e80f593b5b6d1129e63a77154f"},
 ]
 py = [
     {file = "py-1.8.2-py2.py3-none-any.whl", hash = "sha256:a673fa23d7000440cc885c17dbd34fafcb7d7a6e230b29f6766400de36a33c44"},
