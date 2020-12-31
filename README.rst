@@ -37,7 +37,7 @@ Features
 --------
 
 * Cross-platform: Windows, Mac, and Linux are officially supported.
-* Works with Python 3.6.1+, 3.7 and 3.8.
+* Works with Python 3.8 and 3.9.
 * Splits documents by max size.
 * Checks for high-resolution PDFs before splitting.
 
@@ -45,7 +45,7 @@ Features
 Requirements
 ------------
 
-You need Python 3.6.1 or above (3.8 recommended) installed on your machine.
+You need Python 3.8 or above (3.9 recommended) installed on your machine.
 
 Windows users should download `Windows x86-64 executable installer` and in the installer screen be ensure the option `Add Python 3.8 to PATH` is checked:
 
