@@ -10,9 +10,8 @@ repository = "https://github.com/staticdev/pdf-split-tool"
 documentation = "https://pdf-split-tool.readthedocs.io"
 classifiers = [
     "Programming Language :: Python",
-    "Programming Language :: Python :: 3.6",
-    "Programming Language :: Python :: 3.7",
     "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
     "License :: OSI Approved :: MIT License",
 ]
 
@@ -20,7 +19,7 @@ classifiers = [
 Changelog = "https://github.com/staticdev/pdf-split-tool/releases"
 
 [tool.poetry.dependencies]
-python = "^3.6.1"
+python = "^3.8.0"
 click = "^7.0"
 PyPDF4 = "^1.27.0"
 
