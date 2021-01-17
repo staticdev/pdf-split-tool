@@ -26,7 +26,7 @@ PyPDF4 = "^1.27.0"
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.1"
 coverage = {extras = ["toml"], version = "^5.3"}
-safety = "^1.10.0"
+safety = "^1.10.3"
 mypy = "^0.790"
 typeguard = "^2.10.0"
 xdoctest = "^0.15.0"
