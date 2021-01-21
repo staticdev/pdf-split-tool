@@ -1,6 +1,8 @@
 Pdf Split Tool
 ==============
 
+**MAINTAINER NEEDED: this project is complete but won't be updated until further notice. If you have interest in improving it, please contact me by creating an `issue here`_.**
+
 |PyPI| |Python Version| |License|
 
 |Read the Docs| |Tests| |Codecov|
@@ -120,6 +122,7 @@ Credits
 This project was generated from `@cjolowicz`_'s `Hypermodern Python Cookiecutter`_ template.
 
 
+.. _issue here: https://github.com/staticdev/staticdev/issues
 .. _@cjolowicz: https://github.com/cjolowicz
 .. _Cookiecutter: https://github.com/audreyr/cookiecutter
 .. _MIT: http://opensource.org/licenses/MIT
