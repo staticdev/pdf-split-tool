@@ -1,7 +1,7 @@
 Pdf Split Tool
 ==============
 
-**MAINTAINER NEEDED: this project is complete but won't be updated until further notice. If you have interest in improving it, please contact me by creating an `issue here`_.**
+**MAINTAINER NEEDED: this project is complete but won't be updated until further notice. If you have interest in improving it, please contact me by creating an** `issue here`_ **.**
 
 |PyPI| |Python Version| |License|
 
