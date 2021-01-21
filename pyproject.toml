@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pdf-split-tool"
-version = "1.0.1"
+version = "1.0.2"
 description = "Pdf Split Tool"
 authors = ["Thiago Carvalho D'Ávila <thiagocavila@gmail.com>"]
 license = "MIT"
